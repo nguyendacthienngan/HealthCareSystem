@@ -1,16 +1,14 @@
 <template>
-    <div>
-        Test 
-    </div>    
+  <div>
+    Test
+  </div>
 </template>
 
 <script>
-
 export default {
-    mounted(){
-        callFrame = window.DailyIframe.createFrame();
-        callFrame.join({ url: 'https://ehealthcaresystem.daily.co/Test' });
-    }
-}
-  
+  mounted() {
+    var callFrame = window.DailyIframe.createFrame();
+    callFrame.join({ url: "https://ehealthcaresystem.daily.co/Test" });
+  },
+};
 </script>
