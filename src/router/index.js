@@ -70,16 +70,17 @@ export default new Router({
 function configRoutes () {
   return [
     {
+      path: '/videocall',
+      name: 'VideoCall',
+      component: VideoCall
+    },
+    {
       path: '/',
       redirect: '/dashboard',
       name: 'Home',
       component: TheContainer,
       children: [
-        {
-          path: 'videocall',
-          name: 'VideoCall',
-          component: VideoCall
-        },
+        
         {
           path: 'dashboard',
           name: 'Dashboard',
