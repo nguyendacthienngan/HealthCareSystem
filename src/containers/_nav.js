@@ -14,6 +14,22 @@ export default [
       },
       {
         _name: 'CSidebarNavTitle',
+        _children: ['Quản lý thông tin']
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'A',
+        to: '/theme/typography',
+        icon: 'cil-pencil'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'A',
+        to: '/theme/typography',
+        icon: 'cil-pencil'
+      },
+      {
+        _name: 'CSidebarNavTitle',
         _children: ['Theme']
       },
       {
