@@ -6,6 +6,7 @@ const TheContainer = () => import('@/containers/TheContainer')
 
 // Views
 const Dashboard = () => import('@/views/Dashboard')
+const VideoCall = () => import('@/views/videocall/VideoCall.vue')
 
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
@@ -74,6 +75,11 @@ function configRoutes () {
       name: 'Home',
       component: TheContainer,
       children: [
+        {
+          path: 'videocall',
+          name: 'VideoCall',
+          component: VideoCall
+        },
         {
           path: 'dashboard',
           name: 'Dashboard',
