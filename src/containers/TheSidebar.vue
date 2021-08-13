@@ -46,3 +46,43 @@ export default {
   }
 }
 </script>
+<style >
+.c-sidebar-dark {
+  background-color: #52b788 !important;
+  color: black !important;
+}
+.c-sidebar-nav{
+  background-color:#52b788 !important;
+  color: black !important;
+}
+.c-sidebar-brand{
+  background: #52b788 !important;
+  color: black !important;
+}
+.c-sidebar-minimizer{
+  background: #52b788 !important;
+  color: black !important;
+}
+ul.c-sidebar-nav li a {
+  color: black !important;
+}
+ul.c-sidebar-nav li a svg path{
+  fill: black !important;
+}
+ul.c-sidebar-nav li {
+  color: black !important;
+}
+ul.c-sidebar-nav li.c-show ul li a{
+    background: #74c69d !important;
+
+    /* color: white !important; */
+}
+ul.c-sidebar-nav li.c-show a{
+    background: #95d5b2 !important;
+    /* color: white !important; */
+
+}
+.c-sidebar-nav-item a:hover, .c-sidebar-nav-dropdown a:hover{
+  background: #95d5b2 !important
+}
+</style>
