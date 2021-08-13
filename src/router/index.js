@@ -7,6 +7,7 @@ const TheContainer = () => import('@/containers/TheContainer')
 // Views
 const Dashboard = () => import('@/views/Dashboard')
 const VideoCall = () => import('@/views/videocall/VideoCall.vue')
+const ChatBot = () => import('@/views/chatbot/ChatBot.vue')
 
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
@@ -73,6 +74,11 @@ function configRoutes () {
       path: '/videocall',
       name: 'VideoCall',
       component: VideoCall
+    },
+    {
+      path: '/chatbot',
+      name: 'ChatBot',
+      component: ChatBot
     },
     {
       path: '/',
