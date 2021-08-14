@@ -1,6 +1,6 @@
 <template>
-  <CRow>
-    <CCol col="12" lg="6">
+  <CRow class="d-flex justify-content-center">
+    <CCol col="12" lg="6" class="">
       <CCard>
         <CCardHeader>
           User id:  {{ $route.params.id }}
@@ -63,3 +63,9 @@ export default {
   }
 }
 </script>
+
+<style >
+  .container-fluid{
+    /* text-align: center !important; */
+  }
+</style>

@@ -1,41 +1,52 @@
 <template>
-  <CRow>
-    <CCol col="12" xl="8">
-      <CCard>
-        <CCardHeader>
-          Users
-        </CCardHeader>
-        <CCardBody>
-          <CDataTable
-            hover
-            striped
-            :items="items"
-            :fields="fields"
-            :items-per-page="5"
-            clickable-rows
-            :active-page="activePage"
-            @row-clicked="rowClicked"
-            :pagination="{ doubleArrows: false, align: 'center'}"
-            @page-change="pageChange"
-          >
-            <template #status="data">
-              <td>
-                <CBadge :color="getBadge(data.item.status)">
-                  {{data.item.status}}
-                </CBadge>
-              </td>
-            </template>
-          </CDataTable>
-        </CCardBody>
-      </CCard>
-    </CCol>
-  </CRow>
+  <div>
+    <CRow class=" p-3">
+      <CButton type="submit" size="sm" color="primary" class="ml-auto">
+        <CIcon :content="$options.freeSet.cilPlus"/> 
+          Thêm
+      </CButton>
+    </CRow>
+    <CRow>
+      <CCol col="12" xl="12">
+        <CCard>
+          <CCardHeader>
+            Danh sách bác sĩ
+          </CCardHeader>
+          <CCardBody>
+            <CDataTable
+              hover
+              striped
+              :items="items"
+              :fields="fields"
+              :items-per-page="5"
+              clickable-rows
+              :active-page="activePage"
+              @row-clicked="rowClicked"
+              :pagination="{ doubleArrows: false, align: 'center'}"
+              @page-change="pageChange"
+            >
+              <template #status="data">
+                <td>
+                  <CBadge :color="getBadge(data.item.status)">
+                    {{data.item.status}}
+                  </CBadge>
+                </td>
+              </template>
+            </CDataTable>
+          </CCardBody>
+        </CCard>
+      </CCol>
+    </CRow>
+  </div>
 </template>
 
 <script>
+import { freeSet } from '@coreui/icons'
+
 import usersData from './Data'
 export default {
   name: 'Users',
+  freeSet,
   data () {
     return {
       items: usersData,

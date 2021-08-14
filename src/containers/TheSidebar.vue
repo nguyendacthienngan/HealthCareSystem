@@ -9,7 +9,7 @@
       <div class="c-sidebar-brand-full">
         <br>
         <img 
-          src="../assets/logo/Logo(Red).png"
+          src="../assets/logo/Logo(1).png"
           width="150"
           height="104"
         >
@@ -38,7 +38,6 @@ import nav from './_nav'
 import nav_patient from './_nav_patient'
 import nav_doctor from './_nav_doctor'
 import cilPencil from '../assets/logo/logo'
-// import { cilPencil } from '@coreui/icons'
 
 export default {
   pencil: cilPencil,
@@ -62,41 +61,42 @@ export default {
 </script>
 <style >
 .c-sidebar-dark {
-  background-color: #f7cba4  !important;
-  color: black !important;
+  background-color: #003049  !important;
+  color: white !important;
 }
 .c-sidebar-nav{
-  background-color:#f7cba4  !important;
-  color: black !important;
+  background-color:#003049  !important;
+  color: white !important;
 }
 .c-sidebar-brand{
-  background: #f7cba4  !important;
-  color: black !important;
+  background: #003049  !important;
+  color: white !important;
 }
 .c-sidebar-minimizer{
-  background: #f7cba4  !important;
-  color: black !important;
+  background: #003049  !important;
+  color: white !important;
 }
 ul.c-sidebar-nav li a {
-  color: black !important;
+  color: white !important;
 }
 ul.c-sidebar-nav li a svg path{
-  fill: black !important;
+  fill: white !important;
 }
 ul.c-sidebar-nav li {
-  color: black !important;
+  color: white !important;
 }
 ul.c-sidebar-nav li.c-show ul li a{
-    background: #ffacb0 !important;
-    color: white !
+  background: #ff8f95 !important;
+  color: white !
 }
 ul.c-sidebar-nav li.c-show a{
-    background: #ff8f95 !important;
+    background: #fd5d65 !important;
+    color: white !important;
 }
 .c-sidebar-nav-item a:hover, .c-sidebar-nav-dropdown a:hover{
   background: #ff8f95 !important
 }
 .c-active{
-  background-color: #ff8f95 !important;
+  background-color: #fd5d65 !important;
 }
 </style>
