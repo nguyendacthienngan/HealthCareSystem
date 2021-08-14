@@ -105,7 +105,7 @@ function configRoutes () {
         {
           path: 'doctors',
           meta: {
-            label: 'Doctors'
+            label: 'Bác sĩ'
           },
           component: {
             render(c) {
@@ -115,7 +115,7 @@ function configRoutes () {
           children: [
             {
               path: 'create',
-              name: 'Create Doctor',
+              name: 'Thêm bác sĩ',
               component: DoctorNew
             },
             {
