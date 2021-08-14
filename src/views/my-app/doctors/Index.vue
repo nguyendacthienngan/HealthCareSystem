@@ -1,16 +1,17 @@
 <template>
   <div>
-    <CRow class=" p-3">
-      <CButton type="submit" size="sm" color="primary" class="ml-auto" href="#/doctors/create">
-        <CIcon :content="$options.freeSet.cilPlus"/> 
-          Thêm
-      </CButton>
-    </CRow>
     <CRow>
       <CCol col="12" xl="12">
         <CCard>
-          <CCardHeader>
-            Danh sách bác sĩ
+          <CCardHeader class="">
+            <div class="card-header-actions p-3 ">
+                <CButton type="submit" size="sm" color="primary" class="" href="#/doctors/create">
+                  <CIcon :content="$options.freeSet.cilPlus"/> 
+                  Create
+                </CButton>
+            </div>
+            <h4 class="p-3 text-center">Danh sách bác sĩ</h4>
+           
           </CCardHeader>
           <CCardBody>
             <CDataTable

@@ -1,108 +1,111 @@
 <template>
   <div>
     <CRow>
-      <CCol sm="6">
+      <CCol col="12">
         <CCard>
           <CCardHeader>
             <strong>Credit Card </strong> <small>Form</small>
-            <div class="card-header-actions">
-              <a 
-                href="https://coreui.io/vue/docs/components/form-components" 
-                class="card-header-action" 
-                rel="noreferrer noopener" 
-                target="_blank"
-              >
-                <small class="text-muted">docs</small>
-              </a>
+            <div class="card-header-actions p-3 ">
+                <CButton type="submit" size="sm" color="danger" class="" href="#/doctors">
+                  <CIcon :content="$options.freeSet.cilX"/> 
+                    Cancel
+                </CButton>
+                <span style="color: transparent">33</span>
+                <CButton type="submit" size="sm" color="success" class="" href="#/doctors">
+                  <CIcon :content="$options.freeSet.cilCheckAlt"/> 
+                    Save
+                </CButton>
             </div>
           </CCardHeader>
           <CCardBody>
             <CRow>
-              <CCol sm="12">
+              <div class="col-6">
                 <CInput
-                  label="Name"
-                  placeholder="Enter your name"
+                  label="Company"
+                  placeholder="Enter your company name"
                 />
-              </CCol>
-            </CRow>
-            <CRow>
-              <CCol sm="12">
                 <CInput
-                  label="Credit Card Number"
-                  placeholder="0000 0000 0000 0000"
+                  label="VAT"
+                  placeholder="PL1234567890"
                 />
-              </CCol>
-            </CRow>
-            <CRow>
-              <CCol sm="4">
-                <CSelect
-                  label="Month"
-                  :options="[1,2,3,4,5,6,7,8,9,10,11,12]"
-                />
-              </CCol>
-              <CCol sm="4">
-                <CSelect
-                  label="Year"
-                  :options="[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025]"
-                />
-              </CCol>
-              <CCol sm="4">
                 <CInput
-                  label="CVV/CVC"
-                  placeholder="123"
+                  label="Street"
+                  placeholder="Enter street name"
                 />
-              </CCol>
+                <CRow>
+                  <CCol sm="8">
+                    <CInput
+                      label="City"
+                      placeholder="Enter your city"
+                    />
+                  </CCol>
+                  <CCol sm="4">
+                    <CInput
+                      label="Postal code"
+                      placeholder="Postal code"
+                    />
+                  </CCol>
+                </CRow>
+                <CInput
+                  label="Country"
+                  placeholder="Country name"
+                />
+              </div>
+              <div class="col-6">
+                <CRow>
+                  <CCol sm="12">
+                    <CInput
+                      label="Name"
+                      placeholder="Enter your name"
+                    />
+                  </CCol>
+                </CRow>
+                <CRow>
+                  <CCol sm="12">
+                    <CInput
+                      label="Credit Card Number"
+                      placeholder="0000 0000 0000 0000"
+                    />
+                  </CCol>
+                </CRow>
+                <CRow>
+                  <CCol sm="4">
+                    <CSelect
+                      label="Month"
+                      :options="[1,2,3,4,5,6,7,8,9,10,11,12]"
+                    />
+                  </CCol>
+                  <CCol sm="4">
+                    <CSelect
+                      label="Year"
+                      :options="[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025]"
+                    />
+                  </CCol>
+                  <CCol sm="4">
+                    <CInput
+                      label="CVV/CVC"
+                      placeholder="123"
+                    />
+                  </CCol>
+                </CRow>
+              </div>
             </CRow>
+            
           </CCardBody>
         </CCard>
       </CCol>
-      <CCol sm="6">
-        <CCard>
-          <CCardHeader>
-            <strong>Company </strong><small>Form</small>
-          </CCardHeader>
-          <CCardBody>
-            <CInput
-              label="Company"
-              placeholder="Enter your company name"
-            />
-            <CInput
-              label="VAT"
-              placeholder="PL1234567890"
-            />
-            <CInput
-              label="Street"
-              placeholder="Enter street name"
-            />
-            <CRow>
-              <CCol sm="8">
-                <CInput
-                  label="City"
-                  placeholder="Enter your city"
-                />
-              </CCol>
-              <CCol sm="4">
-                <CInput
-                  label="Postal code"
-                  placeholder="Postal code"
-                />
-              </CCol>
-            </CRow>
-            <CInput
-              label="Country"
-              placeholder="Country name"
-            />
-          </CCardBody>
-        </CCard>
-      </CCol>
+      
     </CRow>
     
   </div>
 </template>
 
 <script>
+import { freeSet } from '@coreui/icons'
+
 export default {
   name: 'Forms',
+  freeSet,
   data () {
     return {
       selected: [], // Must be an array reference!

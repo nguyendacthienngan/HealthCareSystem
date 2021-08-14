@@ -43,7 +43,7 @@ export default {
           _name: 'CSidebarNavDropdown',
           name: 'Lịch khám',
           route: '/meetings',
-          icon: 'cil-bell',
+          icon: 'cil-calendar',
           meta: 'forUser',
           items: [
             {
@@ -52,15 +52,20 @@ export default {
             },
             {
               name: 'Lịch khám của bạn',
-              to: '/meetings/yours'
+              to: '/meetings/yours',
+              badge: {
+                color: 'primary',
+                text: 'NEW'
+              }
             }
-          ]
+          ],
+          
         },
         {
           _name: 'CSidebarNavDropdown',
           name: 'Trạng thái sức khỏe',
           route: '/health',
-          icon: 'cil-bell',
+          icon: 'cil-drop',
           meta: 'forUser',
           items: [
             {
@@ -69,16 +74,26 @@ export default {
             },
             {
               name: 'Trợ lý của bạn',
-              to: '/chatbot'
-            }
-          ]
+              to: '/chatbot',
+              badge: {
+                color: 'primary',
+                text: 'NEW'
+              }
+            },
+            
+          ],
+          
         },
         {
           _name: 'CSidebarNavItem',
           name: 'Ví điện tử',
           to: '/wallet',
-          icon: 'cil-calculator',
-          meta: 'forUser'
+          icon: 'cil-drop',
+          meta: 'forUser',
+          badge: {
+            color: 'primary',
+            text: 'NEW'
+          }
         },
 
         {

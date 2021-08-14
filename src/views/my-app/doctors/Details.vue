@@ -3,7 +3,13 @@
     <CCol col="12" lg="6" class="">
       <CCard>
         <CCardHeader>
-          User id:  {{ $route.params.id }}
+          <div class="">
+            <a href="#/doctors">
+              <CIcon :content="$options.freeSet.cilArrowLeft" /> 
+            </a>
+            <h4 class="text-center">Thông tin của {{this.username}}</h4>
+          </div>
+         
         </CCardHeader>
         <CCardBody>
           <CDataTable
@@ -15,7 +21,7 @@
           />
         </CCardBody>
         <CCardFooter>
-          <CButton color="primary" @click="goBack">Back</CButton>
+         
         </CCardFooter>
       </CCard>
     </CCol>
@@ -23,9 +29,12 @@
 </template>
 
 <script>
+import { freeSet } from '@coreui/icons'
+
 import usersData from './Data'
 export default {
   name: 'User',
+  freeSet,
   beforeRouteEnter(to, from, next) {
     next(vm => {
       vm.usersOpened = from.fullPath.includes('users')
