@@ -10,6 +10,8 @@ import config from './config'
 import translations from './translations/translations.json'
 import { register_service_worker } from './utils'
 
+import { SchedulePlugin } from '@syncfusion/ej2-vue-schedule';
+
 register_service_worker()
 
 Vue.config.productionTip = false
@@ -18,6 +20,8 @@ Vue.prototype.translations = translations // <- set translations to global scope
 
 Vue.config.performance = true
 Vue.use(CoreuiVue)
+Vue.use(SchedulePlugin);
+
 Vue.prototype.$log = console.log.bind(console)
 
 /* (global) This code is going to tell us, if history mode can be activated on the client, so the application can be consumed without sessionStorage */
