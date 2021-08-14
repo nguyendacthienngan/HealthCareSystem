@@ -6,20 +6,20 @@
     @update:show="(value) => $store.commit('set', ['sidebarShow', value])"
   >
     <CSidebarBrand class="d-md-down-none" to="/">
-      <CIcon 
-        class="c-sidebar-brand-full" 
-        name="logo" 
-        size="custom-size" 
-        :height="35" 
-        viewBox="0 0 556 134"
-      />
-      <CIcon 
+      <div class="c-sidebar-brand-full">
+        <br>
+        <img 
+          src="../assets/logo/Logo(Red).png"
+          width="150"
+          height="104"
+        >
+      </div>
+            <img 
         class="c-sidebar-brand-minimized" 
-        name="logo" 
-        size="custom-size" 
-        :height="35" 
-        viewBox="0 0 110 134"
-      />
+        src="../assets/logo/MinimizerIcon.png"
+        width="35"
+        height="28"
+      >
     </CSidebarBrand>
 
     <CRenderFunction 
@@ -37,7 +37,11 @@
 import nav from './_nav'
 import nav_patient from './_nav_patient'
 import nav_doctor from './_nav_doctor'
+import cilPencil from '../assets/logo/logo'
+// import { cilPencil } from '@coreui/icons'
+
 export default {
+  pencil: cilPencil,
   name: 'TheSidebar',
   computed: {
     computedNav () {
