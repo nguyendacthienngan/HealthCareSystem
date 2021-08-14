@@ -1,15 +1,25 @@
 <template>
   <CRow class="d-flex justify-content-center">
-    <CCol col="12" lg="6" class="">
+    <CCol col="12" lg="10" class="">
       <CCard>
-        <CCardHeader>
-          <div class="">
-            <a href="#/doctors">
+        <CCardHeader class="">
+          <div class="row">
+            <a href="#/doctors" class="col-4">
               <CIcon :content="$options.freeSet.cilArrowLeft" /> 
             </a>
-            <h4 class="text-center">Thông tin của {{this.username}}</h4>
+            <h4 class="text-center col-4 "><small>Thông tin của</small>  <br> {{this.username}}</h4>
+              <div class="card-header-actions p-3 float-right col-4 justify-content-end row">
+                <CButton type="submit" size="sm" color="danger" class="" href="#/doctors/create">
+                    <CIcon :content="$options.freeSet.cilTrash"/> 
+                    Delete
+                  </CButton>
+                  <span style="color:transparent">aaa</span>
+                  <CButton type="submit" size="sm" color="success" class="" href="#/doctors/create">
+                    <CIcon :content="$options.freeSet.cilPencil"/> 
+                    Edit
+                  </CButton>
+              </div>  
           </div>
-         
         </CCardHeader>
         <CCardBody>
           <CDataTable
@@ -17,7 +27,6 @@
             small
             fixed
             :items="visibleData"
-            :fields="fields"
           />
         </CCardBody>
         <CCardFooter>

@@ -94,12 +94,11 @@ function configRoutes () {
     {
       path: '/',
       redirect: '/dashboard',
-      name: 'Home',
+      name: 'Trang chủ',
       component: TheContainer,
       children: [
         {
           path: 'dashboard',
-          name: 'Dashboard',
           component: Dashboard
         },
         {
@@ -120,13 +119,13 @@ function configRoutes () {
             },
             {
               path: '',
-              name: 'Doctors',
+              name: 'Danh sách Bác sĩ',
               component: Doctor
             },
             {
               path: ':id',
               meta: {
-                label: 'Doctor Details'
+                label: 'Thông tin chi tiết'
               },
               name: 'Doctor',
               component: DoctorDetails
