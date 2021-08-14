@@ -1,7 +1,6 @@
 <template>
       
     <div>
-     
         <CRow>
           <CCol col="12">
             <CCard>

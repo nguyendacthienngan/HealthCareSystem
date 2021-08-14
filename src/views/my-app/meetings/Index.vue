@@ -1,5 +1,13 @@
 <template>
   <div id=''>
+    <CAlert show color="success">
+      <h4 class="alert-heading">Nhắc nhở</h4>
+      <p>
+        Bạn sắp có một hẹn khám vào ngày <strong>15/9/2021</strong> với bác sĩ <strong>Chung Thái Dung</strong></p>
+      <p class="mb-0">
+        Hãy ấn vào <a href="#/videocall">Đây</a> nhé
+      </p>
+    </CAlert>
     <div class="card-header-actions p-3 ">
         <CButton type="submit" size="sm" color="primary" class="" href="#/meetings/create">
           <CIcon :content="$options.freeSet.cilPlus"/> 
