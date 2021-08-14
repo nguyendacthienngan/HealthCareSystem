@@ -17,6 +17,9 @@ const DoctorDetails = () => import('@/views/my-app/doctors/Details.vue')
 const DoctorNew = () => import('@/views/my-app/doctors/New.vue')
 
 const Patient = () => import('@/views/my-app/patients/Index.vue')
+const PatientDetails = () => import('@/views/my-app/patients/Details.vue')
+const PatientNew = () => import('@/views/my-app/patients/New.vue')
+
 const Meeting = () => import('@/views/my-app/meetings/Index.vue')
 const Wallet = () => import('@/views/my-app/wallet/Index.vue')
 
@@ -136,7 +139,32 @@ function configRoutes () {
         {
           path: 'patients',
           name: 'Bệnh nhân',
-          component: Patient
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
+          children: [
+            {
+              path: 'create',
+              name: 'Thêm bệnh nhân',
+              component: PatientNew
+            },
+            {
+              path: '',
+              name: 'Danh sách Bệnh nhân',
+              component: Patient
+            },
+            {
+              path: ':id',
+              meta: {
+                label: 'Thông tin chi tiết'
+              },
+              name: 'Doctor',
+              component: PatientDetails
+            },
+            
+          ]
         },
         {
           path: '/meetings',
