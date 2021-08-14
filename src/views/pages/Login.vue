@@ -6,11 +6,12 @@
           <CCardGroup>
             <CCard class="p-4">
               <CCardBody>
-                <CForm>
+                <CForm @submit="onFormSubmit">
                   <h1>Login</h1>
                   <p class="text-muted">Sign In to your account</p>
                   <CInput
                     placeholder="Username"
+                    v-model="username" 
                     autocomplete="username email"
                   >
                     <template #prepend-content><CIcon name="cil-user"/></template>
@@ -18,13 +19,14 @@
                   <CInput
                     placeholder="Password"
                     type="password"
+                    v-model="password" 
                     autocomplete="curent-password"
                   >
                     <template #prepend-content><CIcon name="cil-lock-locked"/></template>
                   </CInput>
                   <CRow>
                     <CCol col="6" class="text-left">
-                      <CButton color="primary" class="px-4">Login</CButton>
+                      <CButton @click="onFormSubmit()" color="primary" class="px-4">Login</CButton>
                     </CCol>
                     <CCol col="6" class="text-right">
                       <CButton color="link" class="px-0">Forgot password?</CButton>
@@ -61,6 +63,54 @@
 
 <script>
 export default {
-  name: 'Login'
+  name: 'Login',
+  methods:{
+    onFormSubmit(){
+      const username = this.username;
+      const password = this.password;
+      for(let u of this.users){
+        if(u.username == username && u.password == password){
+          localStorage.currentUserID = u.id
+          this.currentUserID = u.id
+          this.$router.push({
+              path: `/`
+          });
+        }
+      }
+    }
+  },
+  mounted() {
+  },
+  watch: {
+    currentUserID(newID) {
+      localStorage.currentUserID = newID;
+    }
+  },
+  data: function(){
+    return {
+      username: '',
+      password: '',
+      currentUserID: 1,
+      users: [
+        {
+          id: 1,
+          username: 'ngan',
+          password: '123',
+          role: 'admin'
+        },
+        {
+          id: 2,
+          username: 'don',
+          password: '123',
+          role: 'doctor'
+        },
+        {
+          id: 3,
+          username: 'heoboi',
+          password: '123',
+          role: 'patient'
+        },
+      ]
+  }},
 }
 </script>

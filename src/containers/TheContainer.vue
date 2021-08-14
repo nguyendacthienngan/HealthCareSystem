@@ -28,7 +28,24 @@ export default {
     TheSidebar,
     TheHeader,
     TheFooter
-  }
+  },
+  data: function(){
+    return {
+      users: [
+        {
+          id: 1,
+          role: 'admin'
+        },
+        {
+          id: 1,
+          role: 'doctor'
+        },
+        {
+          id: 1,
+          role: 'patient'
+        },
+      ]
+  }},
 }
 </script>
 

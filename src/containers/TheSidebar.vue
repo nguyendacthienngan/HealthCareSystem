@@ -22,7 +22,10 @@
       />
     </CSidebarBrand>
 
-    <CRenderFunction flat :content-to-render="$options.nav"/>
+    <CRenderFunction 
+      
+      flat :content-to-render="computedNav"
+    />
     <CSidebarMinimizer
       class="d-md-down-none"
       @click.native="$store.commit('set', ['sidebarMinimize', !minimize])"
@@ -32,11 +35,18 @@
 
 <script>
 import nav from './_nav'
-
+import nav_patient from './_nav_patient'
+import nav_doctor from './_nav_doctor'
 export default {
   name: 'TheSidebar',
-  nav,
   computed: {
+    computedNav () {
+      if (localStorage.currentUserID == '1')
+        return nav.items
+      else if (localStorage.currentUserID == '2')
+        return nav_doctor
+      return nav_patient
+    },
     show () {
       return this.$store.state.sidebarShow 
     },

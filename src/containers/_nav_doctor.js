@@ -1,69 +1,32 @@
-
-export default {
-  items: [
+export default [
     {
       _name: 'CSidebarNav',
       _children: [
         {
-          _name: 'CSidebarNavItem',
-          name: 'Dashboard',
-          meta: 'forUser',
-          to: '/dashboard',
-          icon: 'cil-speedometer',
-          badge: {
-            color: 'primary',
-            text: 'NEW'
-          }
-        },
-        {
           _name: 'CSidebarNavTitle',
-          meta: 'forAdmin',
-          _children: ['Quản lý thông tin']
-        },
-        {
-          _name: 'CSidebarNavItem',
-          name: 'A',
-          meta: 'forAdmin',
-          to: '/theme/typography',
-          icon: 'cil-pencil'
-        },
-        {
-          _name: 'CSidebarNavItem',
-          name: 'A',
-          meta: 'forAdmin',
-          to: '/theme/typography',
-          icon: 'cil-pencil'
-        },
-        {
-          _name: 'CSidebarNavTitle',
-          _children: ['Theme'],
-          meta: 'forUser',
+          _children: ['Theme']
         },
         {
           _name: 'CSidebarNavItem',
           name: 'Colors',
           to: '/theme/colors',
-          icon: 'cil-drop',
-          meta: 'forUser',
+          icon: 'cil-drop'
         },
         {
           _name: 'CSidebarNavItem',
           name: 'Typography',
           to: '/theme/typography',
-          icon: 'cil-pencil',
-          meta: 'forUser',
+          icon: 'cil-pencil'
         },
         {
           _name: 'CSidebarNavTitle',
-          _children: ['Components'],
-          meta: 'forUser',
+          _children: ['Components']
         },
         {
           _name: 'CSidebarNavDropdown',
           name: 'Base',
           route: '/base',
           icon: 'cil-puzzle',
-          meta: 'forUser',
           items: [
             {
               name: 'Breadcrumbs',
@@ -136,7 +99,6 @@ export default {
           name: 'Buttons',
           route: '/buttons',
           icon: 'cil-cursor',
-          meta: 'forUser',
           items: [
             {
               name: 'Buttons',
@@ -160,15 +122,13 @@ export default {
           _name: 'CSidebarNavItem',
           name: 'Charts',
           to: '/charts',
-          icon: 'cil-chart-pie',
-          meta: 'forUser',
+          icon: 'cil-chart-pie'
         },
         {
           _name: 'CSidebarNavDropdown',
           name: 'Icons',
           route: '/icons',
           icon: 'cil-star',
-          meta: 'forUser',
           items: [
             {
               name: 'CoreUI Icons',
@@ -193,7 +153,6 @@ export default {
           name: 'Notifications',
           route: '/notifications',
           icon: 'cil-bell',
-          meta: 'forUser',
           items: [
             {
               name: 'Alerts',
@@ -214,7 +173,6 @@ export default {
           name: 'Widgets',
           to: '/widgets',
           icon: 'cil-calculator',
-          meta: 'forUser',
           badge: {
             color: 'primary',
             text: 'NEW',
@@ -223,20 +181,17 @@ export default {
         },
         {
           _name: 'CSidebarNavDivider',
-          _class: 'm-2',
-          meta: 'forUser',
+          _class: 'm-2'
         },
         {
           _name: 'CSidebarNavTitle',
-          _children: ['Extras'],
-          meta: 'forUser',
+          _children: ['Extras']
         },
         {
           _name: 'CSidebarNavDropdown',
           name: 'Pages',
           route: '/pages',
           icon: 'cil-star',
-          meta: 'forUser',
           items: [
             {
               name: 'Login',
@@ -262,8 +217,7 @@ export default {
           href: 'http://coreui.io/vue/',
           icon: { name: 'cil-cloud-download', class: 'text-white' },
           _class: 'bg-success text-white',
-          target: '_blank',
-          meta: 'forUser',
+          target: '_blank'
         },
         {
           _name: 'CSidebarNavItem',
@@ -271,10 +225,8 @@ export default {
           href: 'http://coreui.io/pro/vue/',
           icon: { name: 'cil-layers', class: 'text-white' },
           _class: 'bg-danger text-white',
-          target: '_blank',
-          meta: 'forUser',
+          target: '_blank'
         }
       ]
     }
   ]
-}

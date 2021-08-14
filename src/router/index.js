@@ -8,6 +8,7 @@ const TheContainer = () => import('@/containers/TheContainer')
 const Dashboard = () => import('@/views/Dashboard')
 const VideoCall = () => import('@/views/videocall/VideoCall.vue')
 const ChatBot = () => import('@/views/chatbot/ChatBot.vue')
+const Form = () => import('@/components/Form.vue')
 
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
@@ -86,7 +87,11 @@ function configRoutes () {
       name: 'Home',
       component: TheContainer,
       children: [
-        
+        {
+          path: 'form',
+          name: 'Form',
+          component: Form
+        },
         {
           path: 'dashboard',
           name: 'Dashboard',
