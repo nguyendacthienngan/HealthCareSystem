@@ -34,9 +34,6 @@ export default {
           to: '/patients',
           icon: 'cil-pencil'
         },
-
-
-
         {
           _name: 'CSidebarNavTitle',
           _children: ['Chăm sóc sức khỏe'],
@@ -45,17 +42,17 @@ export default {
         {
           _name: 'CSidebarNavDropdown',
           name: 'Lịch khám',
-          route: '/meeting',
+          route: '/meetings',
           icon: 'cil-bell',
           meta: 'forUser',
           items: [
             {
               name: 'Đặt lịch khám',
-              to: '/meeting/create'
+              to: '/meetings/create'
             },
             {
               name: 'Lịch khám của bạn',
-              to: '/meeting/yours'
+              to: '/meetings/yours'
             }
           ]
         },

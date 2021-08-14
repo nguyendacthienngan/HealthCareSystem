@@ -6,9 +6,16 @@ const TheContainer = () => import('@/containers/TheContainer')
 
 // Views
 const Dashboard = () => import('@/views/Dashboard')
+
+// My app
 const VideoCall = () => import('@/views/videocall/VideoCall.vue')
 const ChatBot = () => import('@/views/chatbot/ChatBot.vue')
-const Form = () => import('@/components/Form.vue')
+
+
+const Doctor = () => import('@/views/my-app/doctors/Index.vue')
+const Patient = () => import('@/views/my-app/patients/Index.vue')
+const Meeting = () => import('@/views/my-app/meetings/Index.vue')
+const Wallet = () => import('@/views/my-app/wallet/Index.vue')
 
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
@@ -88,14 +95,55 @@ function configRoutes () {
       component: TheContainer,
       children: [
         {
-          path: 'form',
-          name: 'Form',
-          component: Form
-        },
-        {
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard
+        },
+        {
+          path: 'doctors',
+          name: 'Bác sĩ',
+          component: Doctor
+        },
+        {
+          path: 'patients',
+          name: 'Bệnh nhân',
+          component: Patient
+        },
+        {
+          path: '/meetings',
+          redirect: '/meetings/create',
+          name: 'Lịch khám',
+          component: Meeting,
+          children: [
+            {
+              path: 'create',
+              name: 'Đặt lịch khám',
+              component: Meeting
+            },
+            {
+              path: 'yours',
+              name: 'Lịch khám của bạn',
+              component: Meeting
+            }
+          ]
+        },
+        {
+          path: '/health',
+          redirect: '/health/yours',
+          name: 'Lịch khám',
+          component: Meeting,
+          children: [
+            {
+              path: 'yours',
+              name: 'Trạng thái sức khỏe',
+              component: Meeting
+            }
+          ]
+        },
+        {
+          path: '/wallet',
+          name: 'Ví điện tử',
+          component: Wallet
         },
         {
           path: 'theme',
