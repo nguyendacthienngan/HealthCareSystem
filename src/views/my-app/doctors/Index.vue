@@ -1,7 +1,7 @@
 <template>
   <div>
     <CRow class=" p-3">
-      <CButton type="submit" size="sm" color="primary" class="ml-auto">
+      <CButton type="submit" size="sm" color="primary" class="ml-auto" href="#/doctors/create">
         <CIcon :content="$options.freeSet.cilPlus"/> 
           Thêm
       </CButton>
