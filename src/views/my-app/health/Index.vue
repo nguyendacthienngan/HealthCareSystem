@@ -1,5 +1,7 @@
 <template>
-  <CRow>
+  
+  <div>
+    <CRow>
     <CCol sm="12" lg="4">
       <CWidgetDropdown color="primary" header="9.823" text="Members online">
         <template #default>
@@ -95,6 +97,12 @@
       </CWidgetDropdown>
     </CCol>
   </CRow>
+    <CCard>
+      <CCardHeader>Simple bar chart</CCardHeader>
+      <CCardBody><CChartBarSimple background-color="danger"/></CCardBody>        
+    </CCard>
+  </div>
+  
 </template>
 
 <script>
