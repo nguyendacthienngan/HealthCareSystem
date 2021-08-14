@@ -58,19 +58,19 @@ export default {
 </script>
 <style >
 .c-sidebar-dark {
-  background-color: #52b788 !important;
+  background-color: #f7cba4  !important;
   color: black !important;
 }
 .c-sidebar-nav{
-  background-color:#52b788 !important;
+  background-color:#f7cba4  !important;
   color: black !important;
 }
 .c-sidebar-brand{
-  background: #52b788 !important;
+  background: #f7cba4  !important;
   color: black !important;
 }
 .c-sidebar-minimizer{
-  background: #52b788 !important;
+  background: #f7cba4  !important;
   color: black !important;
 }
 ul.c-sidebar-nav li a {
@@ -83,15 +83,16 @@ ul.c-sidebar-nav li {
   color: black !important;
 }
 ul.c-sidebar-nav li.c-show ul li a{
-    background: #74c69d !important;
+    background: #ffacb0 !important;
+    color: white !
 }
 ul.c-sidebar-nav li.c-show a{
-    background: #95d5b2 !important;
+    background: #ff8f95 !important;
 }
 .c-sidebar-nav-item a:hover, .c-sidebar-nav-dropdown a:hover{
-  background: #95d5b2 !important
+  background: #ff8f95 !important
 }
 .c-active{
-  background-color: #95d5b2 !important;
+  background-color: #ff8f95 !important;
 }
 </style>
