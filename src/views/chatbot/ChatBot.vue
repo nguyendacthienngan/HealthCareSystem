@@ -641,3 +641,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.top-head[data-v-cebfdf56]{
+    margin-top: 120px !important;
+    width: 82% !important;
+}
+</style>
