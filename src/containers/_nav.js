@@ -74,7 +74,7 @@ export default {
             },
             {
               name: 'Trợ lý của bạn',
-              to: '/chatbot',
+              to: 'health/chatbot',
               badge: {
                 color: 'primary',
                 text: 'NEW'

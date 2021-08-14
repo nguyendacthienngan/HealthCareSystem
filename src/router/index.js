@@ -24,6 +24,9 @@ const Meeting = () => import('@/views/my-app/meetings/Index.vue')
 const NewMeeting = () => import('@/views/my-app/meetings/New.vue')
 const Wallet = () => import('@/views/my-app/wallet/Index.vue')
 
+const Health = () => import('@/views/my-app/health/Index.vue')
+
+
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
 
@@ -90,11 +93,11 @@ function configRoutes () {
       name: 'VideoCall',
       component: VideoCall
     },
-    {
-      path: '/chatbot',
-      name: 'ChatBot',
-      component: ChatBot
-    },
+    // {
+    //   path: '/chatbot',
+    //   name: 'ChatBot',
+    //   component: ChatBot
+    // },
     {
       path: '/',
       redirect: '/dashboard',
@@ -193,12 +196,21 @@ function configRoutes () {
           path: '/health',
           redirect: '/health/yours',
           name: 'Lịch khám',
-          component: Meeting,
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
           children: [
             {
               path: 'yours',
               name: 'Trạng thái sức khỏe',
-              component: Meeting
+              component: Health
+            },
+            {
+              path: 'chatbot',
+              name: 'Trợ lý của bạn',
+              component: ChatBot
             }
           ]
         },
