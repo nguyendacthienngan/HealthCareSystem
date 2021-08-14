@@ -21,6 +21,7 @@ const PatientDetails = () => import('@/views/my-app/patients/Details.vue')
 const PatientNew = () => import('@/views/my-app/patients/New.vue')
 
 const Meeting = () => import('@/views/my-app/meetings/Index.vue')
+const NewMeeting = () => import('@/views/my-app/meetings/New.vue')
 const Wallet = () => import('@/views/my-app/wallet/Index.vue')
 
 const Colors = () => import('@/views/theme/Colors')
@@ -170,12 +171,16 @@ function configRoutes () {
           path: '/meetings',
           redirect: '/meetings/create',
           name: 'Lịch khám',
-          component: Meeting,
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
           children: [
             {
               path: 'create',
               name: 'Đặt lịch khám',
-              component: Meeting
+              component: NewMeeting
             },
             {
               path: 'yours',
