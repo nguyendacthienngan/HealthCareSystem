@@ -89,8 +89,8 @@ export default new Router({
 function configRoutes () {
   return [
     {
-      path: '/videocall',
-      name: 'VideoCall',
+      path: '/meetings/videocall',
+      name: 'Videocall',
       component: VideoCall
     },
     // {

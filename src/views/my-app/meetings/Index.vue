@@ -5,7 +5,7 @@
       <p>
         Bạn sắp có một hẹn khám vào ngày <strong>15/9/2021</strong> với bác sĩ <strong>Chung Thái Dung</strong></p>
       <p class="mb-0">
-        Hãy ấn vào <a href="#/videocall">Đây</a> nhé
+        Hãy ấn vào <a href="#/meetings/videocall">Đây</a> nhé
       </p>
     </CAlert>
     <div class="card-header-actions p-3 ">
