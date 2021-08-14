@@ -13,6 +13,7 @@ const ChatBot = () => import('@/views/chatbot/ChatBot.vue')
 
 
 const Doctor = () => import('@/views/my-app/doctors/Index.vue')
+const DoctorDetails = () => import('@/views/my-app/doctors/Details.vue')
 const Patient = () => import('@/views/my-app/patients/Index.vue')
 const Meeting = () => import('@/views/my-app/meetings/Index.vue')
 const Wallet = () => import('@/views/my-app/wallet/Index.vue')
@@ -101,8 +102,29 @@ function configRoutes () {
         },
         {
           path: 'doctors',
-          name: 'Bác sĩ',
-          component: Doctor
+          meta: {
+            label: 'Doctors'
+          },
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
+          children: [
+            {
+              path: '',
+              name: 'Doctors',
+              component: Doctor
+            },
+            {
+              path: ':id',
+              meta: {
+                label: 'Doctor Details'
+              },
+              name: 'Doctor',
+              component: DoctorDetails
+            }
+          ]
         },
         {
           path: 'patients',

@@ -6,7 +6,7 @@ export default {
       _children: [
         {
           _name: 'CSidebarNavItem',
-          name: 'Dashboard',
+          name: 'Trang chủ',
           meta: 'forUser',
           to: '/dashboard',
           icon: 'cil-speedometer',
