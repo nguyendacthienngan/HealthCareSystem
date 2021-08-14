@@ -34,7 +34,7 @@
                 >
                   <template #prepend-content><CIcon name="cil-lock-locked"/></template>
                 </CInput>
-                <CButton color="success" block>Create Account</CButton>
+                <CButton color="success" block href="#/pages/login">Create Account</CButton>
               </CForm>
             </CCardBody>
             <CCardFooter class="p-4">

@@ -22,37 +22,68 @@ export default {
         },
         {
           _name: 'CSidebarNavItem',
-          name: 'A',
+          name: 'Bác Sĩ',
           meta: 'forAdmin',
-          to: '/theme/typography',
+          to: '/doctors',
           icon: 'cil-pencil'
         },
         {
           _name: 'CSidebarNavItem',
-          name: 'A',
+          name: 'Bệnh nhân',
           meta: 'forAdmin',
-          to: '/theme/typography',
+          to: '/patients',
           icon: 'cil-pencil'
         },
+
+
+
         {
           _name: 'CSidebarNavTitle',
-          _children: ['Theme'],
+          _children: ['Chăm sóc sức khỏe'],
           meta: 'forUser',
         },
         {
-          _name: 'CSidebarNavItem',
-          name: 'Colors',
-          to: '/theme/colors',
-          icon: 'cil-drop',
+          _name: 'CSidebarNavDropdown',
+          name: 'Lịch khám',
+          route: '/meeting',
+          icon: 'cil-bell',
           meta: 'forUser',
+          items: [
+            {
+              name: 'Đặt lịch khám',
+              to: '/meeting/create'
+            },
+            {
+              name: 'Lịch khám của bạn',
+              to: '/meeting/yours'
+            }
+          ]
+        },
+        {
+          _name: 'CSidebarNavDropdown',
+          name: 'Trạng thái sức khỏe',
+          route: '/health',
+          icon: 'cil-bell',
+          meta: 'forUser',
+          items: [
+            {
+              name: 'Trạng thái sức khỏe',
+              to: '/health/yours'
+            },
+            {
+              name: 'Trợ lý của bạn',
+              to: '/chatbot'
+            }
+          ]
         },
         {
           _name: 'CSidebarNavItem',
-          name: 'Typography',
-          to: '/theme/typography',
-          icon: 'cil-pencil',
-          meta: 'forUser',
+          name: 'Ví điện tử',
+          to: '/wallet',
+          icon: 'cil-calculator',
+          meta: 'forUser'
         },
+
         {
           _name: 'CSidebarNavTitle',
           _children: ['Components'],
@@ -224,54 +255,6 @@ export default {
         {
           _name: 'CSidebarNavDivider',
           _class: 'm-2',
-          meta: 'forUser',
-        },
-        {
-          _name: 'CSidebarNavTitle',
-          _children: ['Extras'],
-          meta: 'forUser',
-        },
-        {
-          _name: 'CSidebarNavDropdown',
-          name: 'Pages',
-          route: '/pages',
-          icon: 'cil-star',
-          meta: 'forUser',
-          items: [
-            {
-              name: 'Login',
-              to: '/pages/login'
-            },
-            {
-              name: 'Register',
-              to: '/pages/register'
-            },
-            {
-              name: 'Error 404',
-              to: '/pages/404'
-            },
-            {
-              name: 'Error 500',
-              to: '/pages/500'
-            }
-          ]
-        },
-        {
-          _name: 'CSidebarNavItem',
-          name: 'Download CoreUI',
-          href: 'http://coreui.io/vue/',
-          icon: { name: 'cil-cloud-download', class: 'text-white' },
-          _class: 'bg-success text-white',
-          target: '_blank',
-          meta: 'forUser',
-        },
-        {
-          _name: 'CSidebarNavItem',
-          name: 'Try CoreUI PRO',
-          href: 'http://coreui.io/pro/vue/',
-          icon: { name: 'cil-layers', class: 'text-white' },
-          _class: 'bg-danger text-white',
-          target: '_blank',
           meta: 'forUser',
         }
       ]

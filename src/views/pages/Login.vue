@@ -49,6 +49,7 @@
                   color="light"
                   variant="outline"
                   size="lg"
+                  href="#/pages/register"
                 >
                   Register Now!
                 </CButton>
