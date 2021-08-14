@@ -1,11 +1,16 @@
 <template>
   <div>
-    <!-- Test -->
+      <TheHeader/>
   </div>
 </template>
 
 <script>
+import TheHeader from '../../containers/TheHeader'
+
 export default {
+  components: {
+    TheHeader,
+  },
   mounted() {
     var callFrame = window.DailyIframe.createFrame({
         showLeaveButton: true,
